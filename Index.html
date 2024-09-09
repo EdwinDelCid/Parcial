@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial Restaurant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        html {
+            scroll-behavior: smooth; /* Suaviza el desplazamiento */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container">
+        <a class="navbar-brand display-4 fw-bold" href="#" id="nombreRestaurante">Parcial Restaurant</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#acerca-de">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Modal para la bienvenida -->
+<div class="modal fade" id="bienvenidaModal" tabindex="-1" aria-labelledby="bienvenidaModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="bienvenidaModalLabel">¡Bienvenido a Parcial Restaurant</Ri:a>!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="fs-5">Gracias por preferirnos. En <strong>Parcial Restaurant</strong>, te ofrecemos la mejor experiencia culinaria. ¡Esperamos que disfrutes cada bocado!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Separador colorido entre la barra de navegación y el carrusel -->
+<div class="bg-warning py-3"></div>
+
+<!-- Carrusel de imágenes -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="./Img/stock-photo-large.jpg" class="d-block w-100" alt="Comida 1">
+        </div>
+        <div class="carousel-item">
+            <img src="./Img/stock-photo-photo-.jpg" class="d-block w-100" alt="Comida 2">
+        </div>
+        <div class="carousel-item">
+            <img src="./Img/stock-photo.jpg" class="d-block w-100" alt="Comida 3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+
+<div class="bg-dark py-3"></div>
+
+<!-- Sección de cards de información -->
+<div class="bg-warning py-3">
+<div id="inicio" class="container my-5" >
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card card-hover">
+                <img src="./Img/foto-hamburguesa.jpg" class="card-img-top" alt="Combo 1">
+                <div class="card-body">
+                    <h5 class="card-title">Combo 1</h5>
+                    <p class="card-text">Este combo incluye Hamburguesa + papas + soda por $5.80.</p>
+                    <button class="btn btn-primary" onclick="showCombo('Combo 1')">Leer más</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card card-hover">
+                <img src="./Img/stock-photo-kebab.jpg" class="card-img-top" alt="Combo 2">
+                <div class="card-body">
+                    <h5 class="card-title">Combo 2</h5>
+                    <p class="card-text">Este combo incluye dos shawarma + bebida de tu elección por $7.50.</p>
+                    <button class="btn btn-primary" onclick="showCombo('Combo 2')">Leer más</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card card-hover">
+                <img src="./Img/sushit.jpg" class="card-img-top" alt="Combo 3">
+                <div class="card-body">
+                    <h5 class="card-title">Combo 3</h5>
+                    <p class="card-text">Delicioso combo familiar Sushi Crunchy por $14.95 (incluye soda).</p>
+                    <button class="btn btn-primary" onclick="showCombo('Combo 3')">Leer más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="bg-dark py-3"></div>
+
+<!-- Sección Acerca de Nosotros -->
+<div id="acerca-de" class="container-fluid py-5 bg-acerca text-white text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="display-4 mb-4">Acerca de Nosotros</h2>
+                <p class="lead">
+                    En <strong>Parcial Restaurant</strong>, nos especializamos en brindar una experiencia gastronómica única, 
+                    combinando ingredientes frescos y recetas innovadoras. Nuestro compromiso es ofrecer comida deliciosa
+                    con un servicio excepcional, en un ambiente acogedor y familiar.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-dark py-3"></div>
+
+<!-- Formulario de contacto -->
+<section id="contacto">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Contacteme</h2>
+          <hr class="star-primary">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+          <form name="sentMessage" id="contactForm" novalidate>
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Name</label>
+                <input type="text" class="form-control" placeholder="Nombre" id="name" required data-validation-required-message="Por favor, ingrese su name.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Por favor, ingrese su email address.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Número de teléfono</label>
+                <input type="tel" class="form-control" placeholder="Número de teléfono" id="phone" required data-validation-required-message="Por favor, ingrese su número de teléfono.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Mensaje</label>
+                <textarea rows="5" class="form-control" placeholder="Mensaje" id="message" required data-validation-required-message="Por favor, ingrese un mensaje."></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="row">
+              <div class="form-group col-xs-12">
+                <button type="submit" class="btn btn-success btn-lg">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div class="bg-warning py-3"></div>  
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>© desarrollado por Edwin Alexander Del Cid Martinez   U20221253. Todos los derechos reservados.</p>
+</footer>
+
+<script src="scripts.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+</body>
+</html>
